@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "285831290356",
+    "project_id": "aplikasi-laundry-24a88",
+    "storage_bucket": "aplikasi-laundry-24a88.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:285831290356:android:514ff36c362ee99bac6da1",
+        "android_client_info": {
+          "package_name": "com.example.ngumbahi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "285831290356-psjtn8qlojq79q9c1cgf0gqkmpsppn5h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ngumbahi",
+            "certificate_hash": "3a328687c97470cf929ba5fc66c6342b6620de47"
+          }
+        },
+        {
+          "client_id": "285831290356-uoojdiqtnv5o49mjove2v95dcqk7uv58.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCb7cwYYsVum0-lSz7k7VjhBwkjBs0yncc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "285831290356-uoojdiqtnv5o49mjove2v95dcqk7uv58.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

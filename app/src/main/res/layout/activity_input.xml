@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="100dp"
+    android:paddingRight="30dp"
+    android:paddingLeft="30dp"
+    android:gravity="center"
+    tools:context=".InputActivity">
+
+    <EditText
+        android:id="@+id/inputnama"
+        android:hint="nama"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="30dp"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginBottom="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/inputberat"
+            android:hint="berat"
+            android:inputType="number"
+            android:layout_width="150dp"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kg"/>
+    </LinearLayout>
+
+
+    <Spinner
+        android:id="@+id/inputtipe"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="50dp"
+        android:entries="@array/Paket"/>
+
+    <Button
+        android:id="@+id/btninput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="tambahkan"/>
+
+</LinearLayout>

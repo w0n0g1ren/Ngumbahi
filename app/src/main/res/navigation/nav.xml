@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.ngumbahi.fragment.homeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/pesananFragment"
+        android:name="com.example.ngumbahi.fragment.PesananFragment"
+        android:label="fragment_pesanan"
+        tools:layout="@layout/fragment_pesanan" />
+    <fragment
+        android:id="@+id/profilFragment"
+        android:name="com.example.ngumbahi.fragment.ProfilFragment"
+        android:label="fragment_profil"
+        tools:layout="@layout/fragment_profil" />
+    <fragment
+        android:id="@+id/selesaiFragment"
+        android:name="com.example.ngumbahi.fragment.SelesaiFragment"
+        android:label="fragment_selesai"
+        tools:layout="@layout/fragment_selesai" />
+</navigation>
