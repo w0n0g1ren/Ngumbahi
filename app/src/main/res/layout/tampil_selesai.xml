@@ -18,7 +18,7 @@
 
             <LinearLayout
                 android:orientation="vertical"
-                android:layout_width="110dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content">
 
                 <TextView
@@ -59,60 +59,52 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="100dp"
+                android:layout_width="wrap_content"
                 android:orientation="vertical"
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:id="@+id/tampilnama"
+                    android:id="@+id/tampilnama2"
                     android:text="Anjay"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"/>
 
                 <TextView
-                    android:id="@+id/tampilberat"
+                    android:id="@+id/tampilberat2"
                     android:text="12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"/>
 
                 <TextView
-                    android:id="@+id/tampiljenis"
+                    android:id="@+id/tampiljenis2"
                     android:text="Iron Men"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"/>
 
                 <TextView
-                    android:id="@+id/tampiltotal"
+                    android:id="@+id/tampiltotal2"
                     android:text="30000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"/>
 
                 <TextView
-                    android:id="@+id/tampiltanggal"
+                    android:id="@+id/tampiltanggal2"
                     android:text="23-01-2090"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"/>
 
                 <TextView
-                    android:id="@+id/tampiltelepon"
-                    android:text="00856409921"
+                    android:id="@+id/tampiltelepon2"
+                    android:text="23-01-2090"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
             </LinearLayout>
-
-            <Button
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="40dp"
-                android:id="@+id/btnselesai"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="selesai"/>
 
 
         </LinearLayout>
@@ -123,10 +115,11 @@
             android:background="@color/black"/>
     </LinearLayout>
 
-
-
-
-
-
+    <ImageView
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="250dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/dua"/>
 
 </androidx.cardview.widget.CardView>

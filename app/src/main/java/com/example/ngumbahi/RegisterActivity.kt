@@ -3,6 +3,7 @@ package com.example.ngumbahi
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.WindowManager
 import android.widget.Toast
 import com.example.ngumbahi.databinding.ActivityRegisterBinding
 import com.example.ngumbahi.model.akun
@@ -19,6 +20,10 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var database : DatabaseReference
     override fun onCreate(savedInstanceState: Bundle?) {
+        getSupportActionBar()!!.hide() // hide the title bar
+        this.getWindow().setFlags(
+            WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -31,7 +36,7 @@ class RegisterActivity : AppCompatActivity() {
             var password = binding.passwordregister.text.toString()
 
             var md5password = md5(password)
-            val db = database.push().key!!
+            val db = nama
             val akun = akun(email,nama,phone,md5password)
             database.child(db).setValue(akun)
 

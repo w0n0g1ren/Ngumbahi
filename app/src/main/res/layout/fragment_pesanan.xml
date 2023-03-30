@@ -6,17 +6,31 @@
     android:padding="20dp"
     tools:context=".fragment.PesananFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvtampil"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:listitem="@layout/tampil"/>
+        android:orientation="vertical"
+        android:layout_height="match_parent">
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btntambah"
-        android:layout_marginLeft="290dp"
-        android:layout_marginTop="570dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/baseline_add_24"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvtampil"
+            android:layout_width="match_parent"
+            android:layout_height="630dp"
+            tools:listitem="@layout/tampil"/>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btntambah"
+            android:layout_marginRight="5dp"
+            android:text="tambah pesanan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"/>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
 </FrameLayout>

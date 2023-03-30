@@ -1,12 +1,17 @@
 package com.example.ngumbahi
 
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.telephony.SmsManager
+import android.view.WindowManager
 import android.widget.Toast
 import com.example.ngumbahi.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.ktx.Firebase
+import java.net.URLEncoder
 
 class LoginActivity : AppCompatActivity() {
 
@@ -14,9 +19,12 @@ class LoginActivity : AppCompatActivity() {
     lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        getSupportActionBar()!!.hide() // hide the title bar
+        this.getWindow().setFlags(
+            WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         auth = FirebaseAuth.getInstance()
         binding.p3.setOnClickListener {
             val email: String = binding.p1.text.toString()
@@ -30,6 +38,7 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(this,RegisterActivity::class.java)
             startActivity(intent)
         }
+
     }
 
     private fun LoginFirebase(email: String, password: String) {

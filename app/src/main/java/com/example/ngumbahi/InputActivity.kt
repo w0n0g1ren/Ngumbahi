@@ -3,6 +3,7 @@ package com.example.ngumbahi
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.WindowManager
 import android.widget.Toast
 import com.example.ngumbahi.databinding.ActivityInputBinding
 import com.example.ngumbahi.model.pesanan
@@ -17,6 +18,10 @@ class InputActivity : AppCompatActivity() {
     private lateinit var database : DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        getSupportActionBar()!!.hide() // hide the title bar
+        this.getWindow().setFlags(
+            WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
         super.onCreate(savedInstanceState)
         binding = ActivityInputBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -33,11 +38,12 @@ class InputActivity : AppCompatActivity() {
             val paket = binding.inputtipe.selectedItem.toString()
             val tanggal = current.toString()
             val status = "proses"
+            val telepon = binding.inputtelepon.text.toString()
 
             val hitung = hitung(berat,paket)
-
-            val pesanan = pesanan(nama,berat,paket,tanggal,hitung,status)
             val db = database.push().key!!
+            val pesanan = pesanan(db,nama,berat,paket,tanggal,hitung,status,telepon)
+
             database.child(db).setValue(pesanan).addOnCompleteListener {
                 if (it.isSuccessful) {
                     Toast.makeText(this, "berhasil ditambahkan", Toast.LENGTH_SHORT).show()
@@ -66,5 +72,7 @@ class InputActivity : AppCompatActivity() {
 
         return total
     }
+
+
 }
 

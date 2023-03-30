@@ -5,11 +5,18 @@
     android:layout_height="match_parent"
     android:padding="20dp"
     tools:context=".fragment.SelesaiFragment">
-
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvtampilselesai"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:listitem="@layout/tampil"/>
+        android:layout_height="650dp"
+        tools:listitem="@layout/tampil_selesai"/>
+
+
+</LinearLayout>
+
 
 </FrameLayout>

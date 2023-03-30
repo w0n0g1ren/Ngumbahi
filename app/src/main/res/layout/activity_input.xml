@@ -42,8 +42,16 @@
         android:id="@+id/inputtipe"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="30dp"
         android:entries="@array/Paket"/>
+
+    <EditText
+        android:id="@+id/inputtelepon"
+        android:hint="telepon"
+        android:layout_width="match_parent"
+        android:inputType="phone"
+        android:layout_height="50dp"
+        android:layout_marginBottom="30dp"/>
 
     <Button
         android:id="@+id/btninput"

@@ -1,23 +1,19 @@
 package com.example.ngumbahi.fragment
 
-import android.content.Context
+import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.ngumbahi.InputActivity
-import com.example.ngumbahi.R
+import com.example.ngumbahi.MainActivity
 import com.example.ngumbahi.adapter.tampiladapter
 import com.example.ngumbahi.databinding.FragmentPesananBinding
 import com.example.ngumbahi.model.pesanan
 import com.google.firebase.database.*
-import com.google.firebase.database.ktx.database
-import com.google.firebase.ktx.Firebase
 
 class PesananFragment : Fragment() {
 
@@ -28,6 +24,7 @@ class PesananFragment : Fragment() {
     private val Binding get() = _binding!!
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
 
     }
 
@@ -41,8 +38,8 @@ class PesananFragment : Fragment() {
                     for(userSnapshot in snapshot.children){
                         val pesanan = userSnapshot.getValue(pesanan::class.java)
                         userArrayList.add(pesanan!!)
-                        val key: String = snapshot.key.toString()
-                        Binding.rvtampil.adapter = tampiladapter(userArrayList,key)
+
+                        Binding.rvtampil.adapter = tampiladapter(context as MainActivity,userArrayList)
                     }
 
 
@@ -65,15 +62,17 @@ class PesananFragment : Fragment() {
         _binding = FragmentPesananBinding.inflate(inflater, container, false)
         _binding?.rvtampil?.apply {
             layoutManager = LinearLayoutManager(activity)
-            _binding?.btntambah?.setOnClickListener {
-                val intent = Intent(context,InputActivity::class.java)
-                startActivity(intent)
-            }
+        }
+        _binding?.btntambah?.setOnClickListener {
+            val intent = Intent(context,InputActivity::class.java)
+            startActivity(intent)
         }
         getpesananData()
         return Binding.root
 
     }
+
+
 
 
 }
